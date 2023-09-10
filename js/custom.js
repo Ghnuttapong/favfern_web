@@ -20,10 +20,10 @@ myApp.controller("myController", function ($scope, $http, $timeout) {
         navbar = $(".navbar");
 
       if (bodyScroll > 50) {
-        $(".navbar-logo img").attr("src", $scope.data.logo.icon_onscroll);
+        $(".navbar-logo img").attr("src", './images/logo-black.png');
         navbar.addClass("nav-scroll");
       } else {
-        $(".navbar-logo img").attr("src", $scope.data.logo.icon);
+        $(".navbar-logo img").attr("src", './images/logo.png');
         navbar.removeClass("nav-scroll");
       }
       $scope.$apply();
@@ -33,10 +33,10 @@ myApp.controller("myController", function ($scope, $http, $timeout) {
         navbar = $(".navbar");
 
       if (bodyScroll > 50) {
-        $(".navbar-logo img").attr("src", $scope.data.logo.icon_onscroll);
+        $(".navbar-logo img").attr("src", './images/logo-black.png');
         navbar.addClass("nav-scroll");
       } else {
-        $(".navbar-logo img").attr("src", $scope.data.logo.icon);
+        $(".navbar-logo img").attr("src", './images/logo.png');
         navbar.removeClass("nav-scroll");
       }
       $scope.$apply();
@@ -50,16 +50,19 @@ myApp.controller("myController", function ($scope, $http, $timeout) {
         topOffset: -63,
       });
     });
-  };
+  }
 
   let fn_init = function () {
-    $http.get("./data.json").then(function (res) {
+    
+
+    fn_jquery();
+    
+    $timeout(function() {
+      $http.get("./data.json").then(function (res) {
         $scope.year = year;
         $scope.data = res.data;
-        $timeout(function() {
-          fn_jquery();
-        }, 200)
     });
+    }, 200)
   };
 
   fn_init();
