@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="portfolio">
+  <meta name="title" content="portfolio">
+
+  <!-- ระบุ path icon แสดงบนแท็ปเว็บไซต์ -->
+  <!-- <link rel="icon" type="image/x-icon" href="/images/logo.png"> -->
+  <!-- ระบุ ชื่อเว็บไซต์ แสดงในแท็ปเว็บไซต์ -->
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="plugin/fontawesome-free-5.1.0-web/css/all.css">
+
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- BLOCK STYLE -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="css/mainStyle.css">
+  <!-- BLOCK STYLE -->
+
+  <!-- Angular -->
+  <script src="plugin/angularjs/angular.min.js"></script>
+  <script src="plugin/angularjs/docs/components/jquery-3.5.1/jquery.js"></script>
+  <!-- Angular -->
+
+  <!-- BLOCK SCRIPT -->
+  <script src="js/custom.js"></script>
+  <!-- BLOCK SCRIPT -->
+
+  <script src="plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <!-- scrollIt js -->
+  <script src="js/scrollIt.min.js"></script>
+  <script src="js/wow.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myController" ng-cloak>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="{{data.logo.icon}}" alt="logo"
+          class="logo-1"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="fas fa-bars"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="0" ng-if="data.banner">Home</a></li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1" ng-if="data.about">About</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5" ng-if="data.experience">Experience</a>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2" ng-if="data.skill">Skills</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4" ng-if="data.recommend">Recommend</a>
+          </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3" ng-if="data.project">Project</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6" ng-if="data.contact">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <!-------Banner Start------->
+  <section class="banner" id="banner" data-scroll-index='0' ng-if="data.banner">
+    <div class="banner-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <div class="banner-text">
+              <h2 class="white" ng-if="data.banner.title">{{data.banner.title}}</h2>
+              <h6 class="white" ng-if="data.banner.introduce">{{data.banner.introduce}}</h6>
+              <p class="banner-text white" ng-if="data.banner.detail">{{data.banner.detail}}</p>
+              <ul ng-if="data.banner.contact.length > 0">
+                <li ng-repeat="value in data.banner.contact">
+                  <a ng-if="value.image" href="{{value.link}}">
+                    <img src="{{value.image}}" class="wow fadeInUp" data-wow-delay="{{(($index + 1) * 10 / 100)}}s" />
+                  </a>
+                  <a ng-if="value.icon" href="{{value.link}}">
+                    <div class="icon-border wow fadeInUp" data-wow-delay="{{(($index + 1) * 10 / 100)}}s">
+                      <span class="{{value.icon}}"></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12" ng-if="data.banner.image_path"> <img src="{{data.banner.image_path}}"
+              class="img-fluid wow fadeInUp" /> </div>
+        </div>
+      </div>
+    </div>
+    <span class="svg-wave d-lg-block d-none"> <img class="svg-hero" src="images/applight-wave.svg"> </span>
+  </section>
+  <!-------Banner End------->
+
+  <!-------About End------->
+  <section class="about section-padding prelative" id="about" data-scroll-index='1' ng-if="data.about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>{{data.about.title}}</h3>
+            <span class="line"></span>
+            <p>{{data.about.description}}</p>
+          </div>
+          <div class="section-content text-center" ng-if="data.about.list.length > 0">
+            <div class="row">
+              <div class="col-md-4" ng-repeat="value in data.about.list">
+                <div ng-if="value.icon" class="icon-box wow fadeInUp" data-wow-delay="0.{{($index * 2) + 1}}s"> <i
+                    class="{{value.icon}}" aria-hidden="true"></i>
+                  <h5>{{value.title}}</h5>
+                  <p>{{value.detail}}</p>
+                </div>
+
+                <div ng-if="value.image" class="icon-box wow fadeInUp" data-wow-delay="0.{{($index * 2) + 1}}s">
+                  <img src="{{value.image}}" alt="{{value.title}}">
+                  <h5>{{value.title}}</h5>
+                  <p>{{value.detail}}</p>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="#" class="about-btn">Learn More</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------About End------->
+
+  <!-------FAQ Start------->
+  <section class="faq section-padding prelative" data-scroll-index='5' ng-if="data.experience">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>{{data.experience.title}}</h3>
+            <span class="line"></span>
+            <p>{{data.experience.description}}</p>
+          </div>
+          <div class="section-content" ng-if="data.experience.list.length > 0">
+            <div class="row">
+              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="{{(($index + 1) * 10) / 100}}s"
+                ng-repeat="value in data.experience.list">
+                <h4>{{value.title}}</h4>
+                <p>{{value.detail}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------FAQ End------->
+
+  <!-------Skill Start------->
+  <section class="feature section-padding" data-scroll-index='2' ng-if="data.skill">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>{{data.skill.title}}</h3>
+            <span class="line"></span>
+            <p>{{data.skill.description}}</p>
+          </div>
+          <div class="section-content text-center" ng-if="data.skill.list.length > 0">
+            <div class="row">
+              <div class="col-md-4 col-sm-12" ng-repeat="value in data.skill.list">
+                <div class="media single-feature wow fadeInUp" data-wow-delay="{{(($index + 1) * 10) / 100}}s">
+                  <div class="media-left icon-border media-right-margin">
+                    <span class="{{value.icon}}" aria-hidden="true"></span>
+                  </div>
+                  <div class="media-body text-left">
+                    <h5>{{value.title}}</h5>
+                    <p>{{value.detail}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------Skill End------->
+
+  <!-------Testimonial Start------->
+  <section class="testimonial section-padding" data-scroll-index='4' ng-if="data.recommend">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center white">
+            <h3>{{data.recommend.title}}</h3>
+            <span class="line"></span>
+            <p class="white">{{data.recommend.description}}</p>
+          </div>
+
+          <div class="section-content" ng-if="data.recommend.list.length > 0">
+            <div class="row">
+              <div class="offset-md-2 col-md-8 col-sm-12">
+                <div class="slider">
+                  <div class="slider-item" ng-repeat="value in data.recommend.list">
+                    <div class="test-img">
+                      <img src="{{value.image}}" alt="{{value.title}}" width="157" height="157">
+                    </div>
+                    <div class="test-text">
+                      <span class="title">
+                        <span>{{value.title}}</span>
+                        {{value.description}}
+                      </span>
+                      {{value.detail}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------Testimonial End------->
+
+  <!-------Team Start------->
+  <section class="team section-padding" data-scroll-index='3' ng-if="data.project">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>{{data.project.title}}</h3>
+            <span class="line"></span>
+            <p>{{data.project.description}}</p>
+          </div>
+          <div class="section-content text-center" ng-if="data.project.list.length > 0">
+            <div class="row">
+              <div class="col-md-4" ng-repeat="value in data.project.list">
+                <div class="team-detail wow fadeIn" data-wow-delay="{{(($index + 1) * 10) / 100}}s">
+                  <a href="{{value.link}}" target="_blank">
+                    <img src="{{value.image}}" class="img-fluid" alt="{{value.title}}" />
+                  </a>
+                  <h4>
+                    <a href="{{value.link}}" target="_blank">{{value.title}}</a>
+                  </h4>
+                  <p>{{value.detail}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-------Team End------->
+
+  <!-------Contact Start------->
+  <section class="contact section-padding" data-scroll-index='6' ng-if="data.contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>{{data.contact.title}}</h3>
+            <span class="line"></span>
+            <p>{{data.contact.description}}</p>
+          </div>
+          <div class="section-content">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="row contact-info white">
+                  <div class="col-12 col-sm-6 col-md-3 contact-item media" ng-repeat="value in data.contact.list">
+                    <i class="{{value.icon}} media-left media-right-margin"></i>
+                    <div class="media-body">
+                      <p class="text-uppercase">{{value.title}}</p>
+                      <a href="{{value.link}}" target="_blank" class="text-white">{{value.detail}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------Contact End------->
+
+  <footer class="footer-copy">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>{{year}} &copy; {{data.footer.name}}</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+
+
+  </script>
+</body>
+
+</html>

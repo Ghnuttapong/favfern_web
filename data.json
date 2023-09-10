@@ -1,0 +1,171 @@
+{
+  "logo": {
+    "icon": "images/logo.png",
+    "icon_onscroll": "images/logo-black.png"
+  },
+  "banner": {
+    "title": "Best App Website Template",
+    "introduce": "This awesome template designed by W3 Template.",
+    "detail": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit neque massa, sit amet tristique ante porta ut. In sodales et justo vel vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "image_path": "images/iphone-screen.png",
+    "contact": [
+      {
+        "icon": "fab fa-google",
+        "link": "#"
+      },
+      {
+        "icon": "fab fa-github",
+        "link": "#"
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "description": "Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.",
+    "list": [
+      {
+        "icon": "fa fa-life-ring",
+        "title": "Support",
+        "detail": "Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae condimentum nulla."
+      },
+      {
+        "image": "images/playstore.png",
+        "title": "Support",
+        "detail": "Phasellus lobortis justo a magna facilisis, in commodo tellus rutrum. Sed vitae condimentum nulla."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.",
+    "list": [
+      {
+        "title": "Nam tellus felis, dignissim quis dui ?",
+        "detail": "Suspendisse fermentum placerat enim, at pellentesque augue. Nullam elit est, ultricies et tellus ac, euismod placerat orci. Donec commodo."
+      },
+      {
+        "title": "Nam tellus felis, dignissim quis dui ?",
+        "detail": "Suspendisse fermentum placerat enim, at pellentesque augue. Nullam elit est, ultricies et tellus ac, euismod placerat orci. Donec commodo."
+      },
+      {
+        "title": "Nam tellus felis, dignissim quis dui ?",
+        "detail": "Suspendisse fermentum placerat enim, at pellentesque augue. Nullam elit est, ultricies et tellus ac, euismod placerat orci. Donec commodo."
+      },
+      {
+        "title": "Nam tellus felis, dignissim quis dui ?",
+        "detail": "Suspendisse fermentum placerat enim, at pellentesque augue. Nullam elit est, ultricies et tellus ac, euismod placerat orci. Donec commodo."
+      },
+      {
+        "title": "Nam tellus felis, dignissim quis dui ?",
+        "detail": "Suspendisse fermentum placerat enim, at pellentesque augue. Nullam elit est, ultricies et tellus ac, euismod placerat orci. Donec commodo."
+      }
+    ]
+  },
+  "skill": {
+    "title": "Skills",
+    "description": "Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.",
+    "list": [
+      {
+        "icon": "fa fa-bolt",
+        "title": "Fast Processing",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore"
+      },
+      {
+        "icon": "fa fa-battery-full",
+        "title": "Low Power Consuming",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore"
+      },
+      {
+        "icon": "fa fa-check-double",
+        "title": "Regular Updates",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore"
+      },
+      {
+        "icon": "fa fa-dollar-sign",
+        "title": "Save Money",
+        "detail": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididugnt ut labore"
+      }
+    ]
+  },
+  "recommend": {
+    "title": "Recommended",
+    "description": "Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.",
+    "list": [
+      {
+        "image": "images/user1.jpg",
+        "title": "John Michal",
+        "description": "Digital Designer",
+        "detail": "Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvo lutpat."
+      },
+      {
+        "image": "images/user2.jpg",
+        "title": "John Michal",
+        "description": "Digital Designer",
+        "detail": "Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvo lutpat."
+      }
+    ]
+  },
+  "project": {
+    "title": "Project",
+    "description": "Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante. Nitu Singh Marketing Specialist Yogesh Singh CEO & Founder",
+    "list": [
+      {
+        "image": "images/user1.jpg",
+        "title": "Nitu Singh",
+        "detail": "Marketing Specialist",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&text=experience&op=translate"
+      },
+      {
+        "image": "images/user2.jpg",
+        "title": "Nitu Singh",
+        "detail": "Marketing Specialist",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&text=experience&op=translate"
+      },
+      {
+        "image": "images/user3.jpg",
+        "title": "Nitu Singh",
+        "detail": "Marketing Specialist",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&text=experience&op=translate"
+      },
+      {
+        "image": "images/user2.jpg",
+        "title": "Nitu Singh",
+        "detail": "Marketing Specialist",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&text=experience&op=translate"
+      },
+      {
+        "image": "images/user3.jpg",
+        "title": "Nitu Singh",
+        "detail": "Marketing Specialist",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&text=experience&op=translate"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Sed quis nisi nisi. Proin consectetur porttitor dui sit amet viverra. Fusce sit amet lorem faucibus, vestibulum ante in, pharetra ante.",
+    "list": [
+      {
+        "icon": "fa fa-map-marker-alt",
+        "title": "ADDRESS",
+        "detail": "NEW DELHI, INDIA",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&op=translate"
+      },
+      {
+        "icon": "fas fa-inbox",
+        "title": "Gmail",
+        "detail": "favfren@gmail.com",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&op=translate"
+      },
+      {
+        "icon": "fab fa-github",
+        "title": "Github",
+        "detail": "favfren_github",
+        "link": "https://translate.google.co.th/?hl=th&sl=en&tl=th&op=translate"
+      }
+    ]
+  },
+  "footer": {
+    "name" : "favfren."
+  }
+}
