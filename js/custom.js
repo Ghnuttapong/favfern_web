@@ -56,13 +56,13 @@ myApp.controller("myController", function ($scope, $http, $timeout) {
     
 
     fn_jquery();
-    
+
     $timeout(function() {
       $http.get("./data.json").then(function (res) {
         $scope.year = year;
         $scope.data = res.data;
     });
-    }, 200)
+    }, 500)
   };
 
   fn_init();
