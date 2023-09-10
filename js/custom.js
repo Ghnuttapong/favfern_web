@@ -56,7 +56,9 @@ myApp.controller("myController", function ($scope, $http, $timeout) {
     $http.get("./data.json").then(function (res) {
         $scope.year = year;
         $scope.data = res.data;
-        fn_jquery();
+        $timeout(function() {
+          fn_jquery();
+        }, 200)
     });
   };
 
